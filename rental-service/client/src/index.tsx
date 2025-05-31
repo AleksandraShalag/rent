@@ -5,16 +5,23 @@ import React from 'react';
 import { Setting } from './const';
 import { offerList } from './mocks/offers-list';
 import { favoritesMock } from './mocks/favorites';
+import { Provider } from 'react-redux';
+import { store } from './store';
+
+
 
 
 createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App 
-      rentalOffersCount = {Setting.RentalOffersCount}
-      offers = {offers}
-      offerList={offerList}
-      favorites={favoritesMock}
-    />
+    <Provider store={store} >
+      <App 
+            rentalOffersCount = {Setting.RentalOffersCount}
+            offers = {offers}
+            offerList={offerList}
+            favorites={favoritesMock}
+          />
+    </Provider>
+   
   </React.StrictMode>
 );
 
