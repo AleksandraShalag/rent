@@ -1,11 +1,11 @@
 
-type OfferLocation = {
+export type OfferLocation = {
   latitude: number;
   longitude: number;
   zoom:number;
 };
 
-type CityOffer = {
+export type CityOffer = {
   name: string;
   location: OfferLocation;
 };
